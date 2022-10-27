@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./logo.webp">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="one" id="one">
+            <h1 class="noDrag">To Do</h1>
+            <button class="btn" onclick="addTask()">Add Tasks</button>
+            <button class="btn" onclick="readyTask()">Ready</button>
+
+            <!-- <div class="task">
+                <input type="checkbox" name="task" id="task1">
+                <label for="task">Task 1</label>
+            </div> -->
+        </div>
+
+        <div class="two" id="two">
+            <h1 class="noDrag" id="no">In Process</h1>
+        </div>
+        <div class="three" id="three">
+            <h1 class="noDrag">QA Sandbox</h1>
+        </div>
+        <div class="four" id="four">
+            <h1 class="noDrag">Production</h1>
+        </div>
+
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <div class="center">
+                <h1>Add Task</h1>
+                <div class="fields">
+                    <label for="labelName">Task Name</label>
+                    <input type="text" name="labelName" id="labelName"><br>
+                </div>
+                <button id="myBtn" onclick="addNewTask()">Add</button>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script src="./script.js"></script>
+
+</html>
